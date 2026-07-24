@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Credibl · EVA — Guided Tour</title>
+<title>Credibl · EVA, Guided Tour</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -326,19 +326,19 @@
 </style>
 <style>
 /* ============================================================
-   TOUR LAYER — appended. Nothing above this line was modified.
+   TOUR LAYER, appended. Nothing above this line was modified.
    Overrides the source's locked viewport so the page can scroll.
    ============================================================ */
 html{height:auto !important}
-/* No !important on overflow — this rule already wins on source order, and an
+/* No !important on overflow, this rule already wins on source order, and an
    !important here would beat the tour's scroll lock below. */
 body{overflow-y:auto;overflow-x:hidden;height:auto !important;scroll-behavior:smooth}
 body.tour-lock{overflow:hidden}
 /* The gate freezes background scroll but must NOT pin #stage the way
-   tour-lock does — the story stays behind the modal, not the app. */
+   tour-lock does, the story stays behind the modal, not the app. */
 body.gate-lock{overflow:hidden}
 /* While the tour runs, pin the stage to the viewport. Scrolling the document
-   to it is fragile — late webfont reflow shifts the story above it and the
+   to it is fragile, late webfont reflow shifts the story above it and the
    stage drifts out of alignment. Fixed positioning sidesteps that entirely. */
 /* The app only exists once the tour has been unlocked. Left in the flow it sits
    one scroll below the hero, which lets a visitor scroll straight past the
@@ -419,8 +419,8 @@ body.free-roam .st-topbar{display:none}
 
 /* ---------------- free-roam bar ----------------
    Sits above the pinned app once the tour ends, so free exploration isn't a
-   dead end — there's always a way back into the guided run. */
-/* Bottom-left, inside the 88px icon rail — the only region of the app whose
+   dead end, there's always a way back into the guided run. */
+/* Bottom-left, inside the 88px icon rail, the only region of the app whose
    lower area is empty. Centre or bottom-right would sit on the thread's action
    chips and dock composer. Collapsed to an icon; the label slides out on hover
    (and briefly on entry) over the subpanel's inert Settings row. */
@@ -428,7 +428,7 @@ body.free-roam .st-topbar{display:none}
   height:44px;padding:0;border-radius:999px;overflow:hidden;white-space:nowrap;
   background:linear-gradient(135deg,#0178EF,#7B51D3);color:#fff;cursor:pointer;
   box-shadow:0 10px 30px rgba(1,120,239,.34);
-  /* Its own keyframe — stPop ends on translate(-50%,-50%) for the centred gate
+  /* Its own keyframe, stPop ends on translate(-50%,-50%) for the centred gate
      card, which would drag this pill half its own size off-position. */
   animation:rbIn .3s cubic-bezier(.2,.8,.3,1) both;
   transition:box-shadow .2s,transform .15s}
@@ -505,14 +505,14 @@ body.free-roam #roamBar{display:flex}
 </head>
 <body>
 <!-- ============================================================
-     ACT 1 — SCROLL STORY  (tour layer, appended — no source edits)
+     ACT 1, SCROLL STORY  (tour layer, appended, no source edits)
      ============================================================ -->
 <div id="story">
 
   <!-- ---------- brand ---------- -->
   <header class="st-topbar">
     <!-- Credibl lockup, inlined from credibl-logo-dark.svg. The source file's
-         <style> block used generic .cls-1/2/3 class names and Layer_* ids —
+         <style> block used generic .cls-1/2/3 class names and Layer_* ids ,
          both go global when inlined, so fills are set per-path instead. -->
     <svg class="st-logo" viewBox="0 0 256.93 72.2" role="img" aria-label="Credibl" xmlns="http://www.w3.org/2000/svg">
       <path fill="#1D1D1B" d="m35.37,70.74C15.84,70.74,0,54.91,0,35.37S15.84,0,35.37,0"></path>
@@ -534,7 +534,7 @@ body.free-roam #roamBar{display:flex}
     <div class="st-wrap">
       <div class="st-eyebrow"><span class="st-dot"></span>Credibl · EVA 2.0</div>
       <h1 class="st-h1">Your ESG team,<br><em>extended</em>.</h1>
-      <p class="st-lede">EVA coordinates 5 AI specialists across emissions, methodology, reporting and assurance — so a question that used to take 3 weeks takes 1 sentence.</p>
+      <p class="st-lede">EVA coordinates 5 AI specialists across emissions, methodology, reporting and assurance, so a question that used to take 3 weeks takes 1 sentence.</p>
       <div class="st-cta">
         <button class="st-btn primary" onclick="requestTour()">
           <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3l14 9-14 9z"/></svg>
@@ -649,7 +649,7 @@ body.free-roam #roamBar{display:flex}
             <span class="glyph" id="evaGlyph"></span>
             <h1>EVA<sup>2</sup></h1>
           </div>
-          <div class="hero-sub">Your <b>Extended Team</b> coordinator. Ask across emissions, air, water &amp; waste — EVA routes to the right specialist.</div>
+          <div class="hero-sub">Your <b>Extended Team</b> coordinator. Ask across emissions, air, water &amp; waste, EVA routes to the right specialist.</div>
 
           <div style="display:flex;justify-content:center">
             <div class="seg">
@@ -659,7 +659,7 @@ body.free-roam #roamBar{display:flex}
           </div>
 
           <div class="composer">
-            <textarea id="composer" placeholder="Ask EVA about your environmental data — a figure, a trend, a report, or a risk to look into…"></textarea>
+            <textarea id="composer" placeholder="Ask EVA about your environmental data, a figure, a trend, a report, or a risk to look into…"></textarea>
             <div class="comp-foot">
               <button class="cbtn" aria-label="Attach"><svg class="ti" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
               <button class="cbtn" aria-label="Voice"><svg class="ti" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
@@ -739,35 +739,35 @@ const AGENTS={
   eva:{name:'EVA',glyph:'E',role:'Coordinator · front door',color:'#133D6C',tint:'#E7EDF5',type:'COORDINATOR',
     desc:'The face of your Extended Team. EVA understands what you need, routes it to the right specialist, and composes answers that span modules.',
     skills:['Intent routing','Navigation','Cross-module synthesis','Report composition'],
-    persona:'EVA is a generalist coordinator. She never does specialist work herself — she resolves your intent, picks the right agent, and stitches multi-agent answers into one response. Think of her as the front door and the router.',
-    owns:['Triaging every request across the four modules','Resolving scope — which facility, period, basis','Fanning out to multiple specialists and composing','Guiding you to the right screen when you need to act'],
+    persona:'EVA is a generalist coordinator. She never does specialist work herself, she resolves your intent, picks the right agent, and stitches multi-agent answers into one response. Think of her as the front door and the router.',
+    owns:['Triaging every request across the four modules','Resolving scope, which facility, period, basis','Fanning out to multiple specialists and composing','Guiding you to the right screen when you need to act'],
     handoffs:['atlas','cira','quill','verity'],
     meta:'Always on · coordinates all agents'},
   atlas:{name:'Argus',glyph:'A',role:'Data Analyst',color:'#0178EF',tint:'#E8F2FE',type:'DATA',
-    desc:'The workhorse. Argus ingests, reconciles, cleans and lands your data — from a single bill to a bulk spreadsheet — and hunts anomalies in it.',
+    desc:'The workhorse. Argus ingests, reconciles, cleans and lands your data, from a single bill to a bulk spreadsheet, and hunts anomalies in it.',
     skills:['Ingestion & OCR','Schema mapping','Dedup & normalise','Anomaly detection','Evidence linking'],
     persona:'Argus is a meticulous data analyst. It handles retrieval, joins, unit conversion, and the statistical work behind every number. When a question turns to methodology or factors, Argus hands up to Cira.',
     owns:['Reconciling any file format to your schema','Cleaning: dedup, unit normalisation, date standardisation','Landing rows into the resource grid with evidence links','Flagging outliers and data-integrity issues'],
     handoffs:['cira'],
     meta:'Data entry & retrieval · every module'},
   cira:{name:'Cira',glyph:'C',role:'GHG Agent · methodology & factors',color:'#2F9E44',tint:'#E7F6EB',type:'METHODOLOGY',
-    desc:'The climate scientist. Cira owns emission factors, GWP basis, scope boundaries and methodology — she decides how things are accounted, never guesses.',
+    desc:'The climate scientist. Cira owns emission factors, GWP basis, scope boundaries and methodology, she decides how things are accounted, never guesses.',
     skills:['Factor selection','AR5/AR6 GWP','Scope boundaries','Market vs location','Coverage decisions'],
-    persona:'Cira is the methodology authority. She selects factors from the Emission Hub, judges whether a resource belongs in a facility, and resolves market-vs-location questions. The platform does the math — Cira sets how.',
+    persona:'Cira is the methodology authority. She selects factors from the Emission Hub, judges whether a resource belongs in a facility, and resolves market-vs-location questions. The platform does the math, Cira sets how.',
     owns:['Choosing the right emission factor and vintage','Deciding scope boundaries and coverage gaps','Resolving methodology conflicts (e.g. market vs location)','Explaining variances in read-only mode'],
     handoffs:['verity'],
     meta:'Methodology & factors · GHG-led'},
   quill:{name:'Quill',glyph:'Q',role:'Reporting Agent',color:'#7B51D3',tint:'#F1ECFB',type:'REPORTING',
-    desc:'The storyteller. Quill turns your data into disclosure-ready narrative and deliverables — board decks, report sections, investor answers.',
+    desc:'The storyteller. Quill turns your data into disclosure-ready narrative and deliverables, board decks, report sections, investor answers.',
     skills:['BRSR / GRI / ESRS','TCFD framing','Board decks','Narrative drafting','Materiality framing'],
-    persona:'Quill handles narrative, disclosure framing, and the deliverables that carry a story. When leadership needs a board section or an investor answer, Quill drafts it — grounded in figures Argus and Cira stand behind.',
+    persona:'Quill handles narrative, disclosure framing, and the deliverables that carry a story. When leadership needs a board section or an investor answer, Quill drafts it, grounded in figures Argus and Cira stand behind.',
     owns:['Drafting disclosure narrative across frameworks','Building board decks and report sections','Framing materiality for an investor reader','Composing PR and investor-facing responses'],
     handoffs:['verity'],
     meta:'Reporting & narrative · disclosure-ready'},
   verity:{name:'Verity',glyph:'V',role:'Auditor',color:'#19243E',tint:'#E8EAEF',type:'ASSURANCE',
-    desc:'The auditor. Verity checks completeness, evidence, integrity and methodology consistency — so you know how defensible the record is before anything is filed.',
+    desc:'The auditor. Verity checks completeness, evidence, integrity and methodology consistency, so you know how defensible the record is before anything is filed.',
     skills:['Completeness sweeps','Evidence linkage','Restatement checks','Defensibility scoring','Readiness memos'],
-    persona:'Verity is your internal auditor, pre-empting the external one. She reads the record every other agent produces and scores its defensibility — completeness, evidence, integrity, methodology consistency.',
+    persona:'Verity is your internal auditor, pre-empting the external one. She reads the record every other agent produces and scores its defensibility, completeness, evidence, integrity, methodology consistency.',
     owns:['Completeness sweeps across facility-months','Checking figures have supporting evidence','Detecting restatements and integrity issues','Assessing audit readiness before filing'],
     handoffs:[],
     meta:'Assurance & audit · reads all records'}
@@ -951,8 +951,8 @@ document.getElementById('artGrid').innerHTML=ARTIFACTS.map(a=>`
 const CHATS=[
   ['Scope 1 outlier hunt','Argus found 3 facilities >2σ off their trailing mean…','atlas','2h'],
   ['DEFRA factor vintages','Cira: all Scope 1 lines on DEFRA/BEIS 2024, AR6…','cira','5h'],
-  ['Q4 board deck','Quill assembled 6 slides — trend, scope split, risks…','quill','1d'],
-  ['Water stress ranking','Weighted withdrawal by basin stress — 4 sites flagged…','atlas','2d'],
+  ['Q4 board deck','Quill assembled 6 slides, trend, scope split, risks…','quill','1d'],
+  ['Water stress ranking','Weighted withdrawal by basin stress, 4 sites flagged…','atlas','2d'],
   ['Dec completeness sweep','Verity: 9 facility-months missing, coverage 94%…','verity','3d'],
 ];
 document.getElementById('chatList').innerHTML=CHATS.map(c=>`
@@ -972,7 +972,7 @@ function openPanel(key){
   document.getElementById('pAsk').style.background=a.color;
   const handoffs=a.handoffs.length
     ? `<div class="psec"><h4>Hands off to</h4><div class="handoff-map">${a.handoffs.map(h=>`<span class="hchip"><span class="hd" style="background:${AGENTS[h].color}"></span>${AGENTS[h].name}</span>`).join('')}</div></div>`
-    : `<div class="psec"><h4>Hands off to</h4><p style="color:var(--ink-3);font-size:13px">Verity is the terminal auditor — she reads every record but doesn't route onward.</p></div>`;
+    : `<div class="psec"><h4>Hands off to</h4><p style="color:var(--ink-3);font-size:13px">Verity is the terminal auditor, she reads every record but doesn't route onward.</p></div>`;
   document.getElementById('panelBody').innerHTML=`
     <div class="psec"><h4>Who ${a.name} is</h4><p>${a.persona}</p></div>
     <div class="psec"><h4>What ${a.name} owns</h4><ul>${a.owns.map(o=>`<li><span class="lb" style="background:${a.color}"></span>${o}</li>`).join('')}</ul></div>
@@ -1077,7 +1077,7 @@ function closeChat(){threadWrap.classList.remove('on');heroBlock.style.display='
 
 /* ---- shared streaming player ----
    A step is either:
-     () => void            (instant: user message or handoff — no typing)
+     () => void            (instant: user message or handoff, no typing)
      { t:'agentKey', fn }  (streamed: shows typing, then reveals) */
 function playSteps(steps){
   let i=0;
@@ -1095,7 +1095,7 @@ function playSteps(steps){
 }
 
 /* ============================================================
-   SCRIPTED CHATS — every chat now streams via playSteps()
+   SCRIPTED CHATS, every chat now streams via playSteps()
    Each returns an array of steps.
    ============================================================ */
 const CHATS_SCRIPT={
@@ -1104,17 +1104,17 @@ const CHATS_SCRIPT={
   atlas:()=>[
     ()=>addMeMsg('Find any facility whose December Scope 1 is more than 2σ off its trailing 12-month mean.'),
     {t:'atlas',fn:()=>{
-      addAgentMsg('atlas',`Ran an outlier sweep across all 185 facilities. <b>Three</b> break the 2σ band for December — here they are, ranked by how far off they are:`);
+      addAgentMsg('atlas',`Ran an outlier sweep across all 185 facilities. <b>Three</b> break the 2σ band for December, here they are, ranked by how far off they are:`);
       addToLast(`<div class="c-rcard"><div class="rh"><svg class="ti" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#0178EF" stroke-width="2"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg>Scope 1 anomalies · Dec 2025<span class="rtag" style="color:var(--orange);background:#FEF3E0">3 flagged</span></div>
         <div class="c-rbody">
           <div class="c-kv"><span class="k conf"><span class="cd a"></span>Anantara Al Baleed</span><span class="v">+3.4σ · 1,180 vs ~610 exp.</span></div>
           <div class="c-kv"><span class="k conf"><span class="cd a"></span>Nhow Frankfurt</span><span class="v">+2.7σ · diesel genset spike</span></div>
           <div class="c-kv"><span class="k conf"><span class="cd a"></span>Oaks Liwa</span><span class="v">−2.3σ · likely under-reported</span></div>
         </div>
-        <div class="c-foot-note"><svg class="ti" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M12 11v5"/></svg>Al Baleed's spike is one entry — worth confirming it isn't a unit error.</div></div>`);
+        <div class="c-foot-note"><svg class="ti" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M12 11v5"/></svg>Al Baleed's spike is one entry, worth confirming it isn't a unit error.</div></div>`);
     }},
     {t:'atlas',delay:1250,fn:()=>{
-      addAgentMsg('atlas',`The Al Baleed spike traces to a single diesel line that reads <b>10× its neighbours</b> — classic order-of-magnitude slip. I can open the source row, or pull the trend so you can see the break.`);
+      addAgentMsg('atlas',`The Al Baleed spike traces to a single diesel line that reads <b>10× its neighbours</b>, classic order-of-magnitude slip. I can open the source row, or pull the trend so you can see the break.`);
       addToLast(`<div class="c-acts"><button class="c-chip solid" style="background:var(--atlas)">Open the source row</button><button class="c-chip">Show 12-mo trend</button><button class="c-chip">Export flagged list</button></div>`);
     }},
   ],
@@ -1123,17 +1123,17 @@ const CHATS_SCRIPT={
   cira:()=>[
     ()=>addMeMsg('Restate our FY25 methane emissions under AR6 instead of AR5. What moves?'),
     {t:'cira',fn:()=>{
-      addAgentMsg('cira',`Switching CH₄ from <b>AR5 (28)</b> to <b>AR6 (29.8)</b> GWP. The platform recomputed every methane line — here's the effect:`);
+      addAgentMsg('cira',`Switching CH₄ from <b>AR5 (28)</b> to <b>AR6 (29.8)</b> GWP. The platform recomputed every methane line, here's the effect:`);
       addToLast(`<div class="c-rcard"><div class="rh"><svg class="ti" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#2F9E44" stroke-width="2"><path d="M12 3c1 3 4 4 4 8a4 4 0 0 1-8 0c0-2 1-3 2-4 0 1 1 2 2 2 1-2-1-4 0-6z"/></svg>AR5 → AR6 restatement · CH₄<span class="rtag" style="color:var(--cira);background:var(--cira-tint)">AR6 GWP</span></div>
         <div class="c-rbody">
           <div class="c-kv"><span class="k">FY25 CH₄ under AR5</span><span class="v">4,210 tCO₂e</span></div>
           <div class="c-kv"><span class="k">FY25 CH₄ under AR6</span><span class="v">4,481 tCO₂e</span></div>
           <div class="c-kv"><span class="k">Delta</span><span class="v" style="color:var(--cira)">+271 tCO₂e · +6.4%</span></div>
         </div>
-        <div class="c-foot-note"><svg class="ti" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/></svg>Only CH₄ lines moved — CO₂ and N₂O are unchanged. Fully traceable for Verity.</div></div>`);
+        <div class="c-foot-note"><svg class="ti" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/></svg>Only CH₄ lines moved, CO₂ and N₂O are unchanged. Fully traceable for Verity.</div></div>`);
     }},
     {t:'cira',delay:1250,fn:()=>{
-      addAgentMsg('cira',`Most of the change sits in <span class="k-cira">fugitive refrigerants and wastewater</span>. If you're moving the whole inventory to AR6, I'd recommend doing it inventory-wide for consistency rather than CH₄ alone — mixed GWP vintages are a common audit finding.`);
+      addAgentMsg('cira',`Most of the change sits in <span class="k-cira">fugitive refrigerants and wastewater</span>. If you're moving the whole inventory to AR6, I'd recommend doing it inventory-wide for consistency rather than CH₄ alone, mixed GWP vintages are a common audit finding.`);
       addToLast(`<div class="c-acts"><button class="c-chip solid" style="background:var(--cira)">Restate inventory-wide</button><button class="c-chip">Keep CH₄ only</button><button class="c-chip">Explain the drivers</button></div>`);
     }},
   ],
@@ -1142,7 +1142,7 @@ const CHATS_SCRIPT={
   quill:()=>[
     ()=>addMeMsg('Build the emissions section of the Q4 board pack.'),
     {t:'quill',fn:()=>{
-      addAgentMsg('quill',`On it. I pulled the approved FY25 figures from Argus and Cira, and framed six slides for a board reader — direction, magnitude, the one driver that matters, and where we're exposed.`);
+      addAgentMsg('quill',`On it. I pulled the approved FY25 figures from Argus and Cira, and framed six slides for a board reader, direction, magnitude, the one driver that matters, and where we're exposed.`);
       addToLast(`<div class="c-rcard"><div class="rh"><svg class="ti" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#7B51D3" stroke-width="1.6"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></svg>Q4 Board Pack · Emissions<span class="rtag" style="color:var(--quill);background:var(--quill-tint,#F1ECFB)">6 slides</span></div>
         <div class="c-rbody">
           <div class="c-kv"><span class="k">1 · Headline</span><span class="v">116k tCO₂e · −4% YoY</span></div>
@@ -1153,7 +1153,7 @@ const CHATS_SCRIPT={
         </div></div>`);
     }},
     {t:'quill',delay:1350,fn:()=>{
-      addAgentMsg('quill',`Deck's ready — every figure carries its source and approval status, so it's board-safe. I saved it to your Library.`);
+      addAgentMsg('quill',`Deck's ready, every figure carries its source and approval status, so it's board-safe. I saved it to your Library.`);
       addToLast(artifactChip('Q4 Board Deck · Emissions','PPTX','#7B51D3','#F1ECFB','deck'));
       addToLast(`<div class="c-acts"><button class="c-chip solid" style="background:var(--quill)">Draft the speaker notes</button><button class="c-chip">Add a peer benchmark</button></div>`);
     }},
@@ -1163,14 +1163,14 @@ const CHATS_SCRIPT={
   verity:()=>[
     ()=>addMeMsg('If the external auditor arrived tomorrow, where are we most exposed on GHG?'),
     {t:'verity',delay:1200,fn:()=>{
-      addAgentMsg('verity',`I read the full FY25 record — completeness, evidence, methodology, and integrity. Here's the readiness picture, worst exposure first:`);
+      addAgentMsg('verity',`I read the full FY25 record, completeness, evidence, methodology, and integrity. Here's the readiness picture, worst exposure first:`);
       addToLast(`<div class="c-rcard"><div class="rh"><svg class="ti" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#19243E" stroke-width="1.8"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>GHG audit readiness<span class="rtag" style="color:var(--orange);background:#FEF3E0">3 gaps</span></div>
         <div class="c-rbody prov-mini">
           <div class="pr"><div class="pic" style="background:#FDEEF0;color:var(--red)"><svg class="ti" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 16H3z"/><path d="M12 10v4"/></svg></div><div><div class="pt"><b>Evidence gaps</b> · high priority</div><div class="pd">7 Scope 1 lines over 10 tCO₂e with no supporting document attached.</div></div></div>
-          <div class="pr"><div class="pic" style="background:#FEF3E0;color:var(--orange)"><svg class="ti" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/></svg></div><div><div class="pt"><b>Completeness</b> · medium</div><div class="pd">9 facility-months missing data — portfolio coverage sits at 94%.</div></div></div>
+          <div class="pr"><div class="pic" style="background:#FEF3E0;color:var(--orange)"><svg class="ti" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/></svg></div><div><div class="pt"><b>Completeness</b> · medium</div><div class="pd">9 facility-months missing data, portfolio coverage sits at 94%.</div></div></div>
           <div class="pr"><div class="pic" style="background:var(--ice);color:var(--navy2)"><svg class="ti" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><div><div class="pt"><b>Methodology</b> · low</div><div class="pd">3 facilities on market-based Scope 2 where config expects location-based.</div></div></div>
         </div>
-        <div class="c-foot-note"><svg class="ti" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Fix the 7 evidence gaps first — that's what an assurer opens with.</div></div>`);
+        <div class="c-foot-note"><svg class="ti" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>Fix the 7 evidence gaps first, that's what an assurer opens with.</div></div>`);
     }},
     {t:'verity',delay:1100,fn:()=>{
       addToLast(artifactChip('GHG Readiness Memo','Report','#19243E','#E8EAEF','doc'));
@@ -1179,13 +1179,13 @@ const CHATS_SCRIPT={
   ]
 };
 
-/* ---- EVA: LIVE routing demo — now just returns steps like the rest ---- */
+/* ---- EVA: LIVE routing demo, now just returns steps like the rest ---- */
 function evaSteps(){
   return [
     ()=>addMeMsg('How are our Scope 1 emissions tracking, and is anything worth worrying about for the board?'),
-    {t:'eva',fn:()=>addAgentMsg('eva',`Good question — that spans data and methodology, so I'll pull the right specialists. Let me get the numbers from <span class="k-atlas">Argus</span> first, then have <span class="k-cira">Cira</span> read anything unusual.`)},
+    {t:'eva',fn:()=>addAgentMsg('eva',`Good question, that spans data and methodology, so I'll pull the right specialists. Let me get the numbers from <span class="k-atlas">Argus</span> first, then have <span class="k-cira">Cira</span> read anything unusual.`)},
     ()=>addHandoff('eva','atlas','<span>Scope 1</span><i>·</i><span>FY25</span><i>·</i><span>portfolio</span><i>·</i><span>board view</span>'),
-    {t:'atlas',fn:()=>{addAgentMsg('atlas',`Scope 1 for FY25 is <b>18,240 tCO₂e</b>, up <b>12% YoY</b>. Most facilities are flat — but three are pulling the total up. Here's the shape:`);
+    {t:'atlas',fn:()=>{addAgentMsg('atlas',`Scope 1 for FY25 is <b>18,240 tCO₂e</b>, up <b>12% YoY</b>. Most facilities are flat, but three are pulling the total up. Here's the shape:`);
       addToLast(`<div class="c-rcard"><div class="rh"><svg class="ti" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#0178EF" stroke-width="2"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg>Scope 1 · top movers</div>
         <div class="c-chart"><div class="bars">
           <div class="bar"><div class="col" style="height:0;background:var(--atlas)" data-h="42"></div><div class="bv">+3.4σ</div><div class="bl">Al Baleed</div></div>
@@ -1195,10 +1195,10 @@ function evaSteps(){
           <div class="bar"><div class="col" style="height:0;background:#B9D9F7" data-h="22"></div><div class="bv">flat</div><div class="bl">Dubai</div></div>
         </div></div></div>`);
       setTimeout(()=>thread.querySelectorAll('.bars .col').forEach(c=>c.style.height=c.dataset.h+'%'),120);}},
-    {t:'atlas',fn:()=>addAgentMsg('atlas',`The data's clean and evidence-linked. But <b>why</b> Frankfurt jumped is a methodology read, not a data one — that's <span class="k-cira">Cira's</span> call.`)},
+    {t:'atlas',fn:()=>addAgentMsg('atlas',`The data's clean and evidence-linked. But <b>why</b> Frankfurt jumped is a methodology read, not a data one, that's <span class="k-cira">Cira's</span> call.`)},
     ()=>addHandoff('atlas','cira','<span>Frankfurt</span><i>·</i><span>+2.7σ</span><i>·</i><span>Scope 1</span><i>·</i><span>Dec spike</span>'),
-    {t:'cira',fn:()=>addAgentMsg('cira',`Frankfurt's spike is real, not an error: the <b>diesel genset ran during a December grid outage</b>, so combustion moved from Scope 2 into Scope 1 for those weeks. It's correctly accounted — worth a footnote, not a fix.`)},
-    {t:'eva',fn:()=>{addAgentMsg('eva',`So the board story is: <b>Scope 1 up 12%</b>, driven by two facilities — one a genuine operational event (Frankfurt's outage), one an anomaly to confirm (Al Baleed). Nothing systemic. I've written it up:`);
+    {t:'cira',fn:()=>addAgentMsg('cira',`Frankfurt's spike is real, not an error: the <b>diesel genset ran during a December grid outage</b>, so combustion moved from Scope 2 into Scope 1 for those weeks. It's correctly accounted, worth a footnote, not a fix.`)},
+    {t:'eva',fn:()=>{addAgentMsg('eva',`So the board story is: <b>Scope 1 up 12%</b>, driven by two facilities, one a genuine operational event (Frankfurt's outage), one an anomaly to confirm (Al Baleed). Nothing systemic. I've written it up:`);
       addToLast(artifactChip('Scope 1 Board Note','Report','#133D6C','#E7EDF5','doc'));
       addToLast(`<div class="c-acts"><button class="c-chip solid" style="background:var(--eva)">Turn into a slide</button><button class="c-chip">Confirm the Al Baleed anomaly</button><button class="c-chip">Draft the footnote</button></div>`);}}
   ];
@@ -1242,14 +1242,14 @@ document.getElementById('dockInput').addEventListener('keydown',e=>{if(e.key==='
 
 <script>
 /* ============================================================
-   HUBSPOT — the only thing you need to edit in this file.
+   HUBSPOT, the only thing you need to edit in this file.
 
    PORTAL_ID is Credibl's, read from the account (app-na2, id 21762362).
    FORM_GUID must be a HubSpot form that has an `email` field:
      Marketing > Lead Capture > Forms > (your form) > Share
    the GUID is the last part of the embed snippet's formId.
 
-   Leave FORM_GUID empty and the gate still works end to end — it
+   Leave FORM_GUID empty and the gate still works end to end, it
    validates and stores the address locally and logs it, it just
    doesn't reach HubSpot.
    ============================================================ */
@@ -1262,7 +1262,7 @@ var HUBSPOT = {
 };
 
 /* ============================================================
-   TOUR ENGINE — drives the mockup via its own public functions.
+   TOUR ENGINE, drives the mockup via its own public functions.
    Selectors live in TOUR[] only; re-point them there if the
    underlying markup changes.
    ============================================================ */
@@ -1288,7 +1288,7 @@ var HUBSPOT = {
 function toEvaView(){ showView('eva', document.querySelector('[data-view="eva"]')); }
 
 /* ============================================================
-   EMAIL GATE — every route into the tour goes through requestTour().
+   EMAIL GATE, every route into the tour goes through requestTour().
    ============================================================ */
 var GATE_KEY = 'credibl_eva_tour_email';
 
@@ -1338,7 +1338,7 @@ function isPersonalEmail(domain){
 
 function requestTour(){
   if (window.innerWidth < 900) return;      // same guard as tourStart
-  if (storedEmail()) { tourStart(); return; }   // already given — don't re-ask
+  if (storedEmail()) { tourStart(); return; }   // already given, don't re-ask
   openGate();
 }
 
@@ -1367,7 +1367,7 @@ function gateError(msg){
 }
 
 /* The page this is embedded on, for HubSpot attribution. Inside an iframe
-   location.href is the tour file, not the host page — prefer the parent when
+   location.href is the tour file, not the host page, prefer the parent when
    same-origin, fall back to the referrer. */
 function hostPageUrl(){
   try { if (window.parent !== window) return window.parent.location.href; } catch (e) {}
@@ -1382,7 +1382,7 @@ function hubspotCookie(){
 
 function submitToHubSpot(email){
   if (!HUBSPOT.FORM_GUID) {
-    console.warn('[EVA tour] No HUBSPOT.FORM_GUID set — captured locally only:', email);
+    console.warn('[EVA tour] No HUBSPOT.FORM_GUID set, captured locally only:', email);
     return Promise.resolve(false);
   }
   var fields = [{ objectTypeId: '0-1', name: 'email', value: email }];
@@ -1390,7 +1390,7 @@ function submitToHubSpot(email){
     fields.push({ objectTypeId: '0-1', name: k, value: HUBSPOT.EXTRA_FIELDS[k] });
   });
 
-  var ctx = { pageUri: hostPageUrl(), pageName: 'Credibl EVA — guided tour' };
+  var ctx = { pageUri: hostPageUrl(), pageName: 'Credibl EVA, guided tour' };
   var hutk = hubspotCookie();
   if (hutk) ctx.hutk = hutk;
 
@@ -1427,7 +1427,7 @@ document.getElementById('stGateForm').addEventListener('submit', function(ev){
   btn.disabled = true;
 
   /* Start the tour whether or not HubSpot accepts the submission. A network
-     blip or a stale form GUID should cost a lead, not break the experience —
+     blip or a stale form GUID should cost a lead, not break the experience ,
      the failure is logged rather than shown to the visitor. */
   function proceed(){
     try { localStorage.setItem(GATE_KEY, email); } catch (e) {}
@@ -1443,7 +1443,7 @@ document.getElementById('stGateForm').addEventListener('submit', function(ev){
 });
 
 /* Flag a personal domain as soon as it's recognisable, the way the calculator
-   does — better than letting someone hit submit and bounce. Waits for a dot so
+   does, better than letting someone hit submit and bounce. Waits for a dot so
    it doesn't fire mid-word on "someone@gm". Otherwise clear the error as they
    correct it; leaving the field red while they're fixing it reads as wrong. */
 document.getElementById('stGateEmail').addEventListener('input', function(){
@@ -1464,7 +1464,7 @@ var TOUR = [
   {
     sel:'.hero .composer',
     title:'Start with a question',
-    desc:'No form, no filters, no report type to choose first. Ask the way you would ask a colleague — EVA works out which facility, which period and which basis you mean.',
+    desc:'No form, no filters, no report type to choose first. Ask the way you would ask a colleague, EVA works out which facility, which period and which basis you mean.',
     before:function(){ toEvaView(); closeChat(); }
   },
   {
@@ -1476,7 +1476,7 @@ var TOUR = [
   {
     sel:'.c-handoff',
     title:'Watch the handoff',
-    desc:'EVA hands to Argus with the scope already resolved — Scope 1, FY25, portfolio, board view. The specialist starts with context instead of questions, and the trail stays intact. Argus will hand to Cira the same way further down.',
+    desc:'EVA hands to Argus with the scope already resolved, Scope 1, FY25, portfolio, board view. The specialist starts with context instead of questions, and the trail stays intact. Argus will hand to Cira the same way further down.',
     before:function(){ toEvaView(); if (!document.querySelector('.c-handoff')) openChat('eva'); },
     wait:'.c-handoff',
     watch:'#thread',
@@ -1485,7 +1485,7 @@ var TOUR = [
   {
     sel:'.c-artifact',
     title:'It ends in something real',
-    desc:'Not a transcript — a board note. Every figure carries its source and approval status, and it saves to your Library the moment it is made.',
+    desc:'Not a transcript, a board note. Every figure carries its source and approval status, and it saves to your Library the moment it is made.',
     before:function(){
       toEvaView();
       if (!document.querySelector('.c-artifact') && !document.querySelector('.c-handoff')) openChat('eva');
@@ -1506,14 +1506,14 @@ var tIdx = 0, tWaitTimer = null, tTrackRaf = null;
 
 /* The mockup auto-scrolls the thread to the bottom on every new message
    (tScroll). While the tour is pinned to a message, that drags the target
-   out from under the spotlight — so we neutralise it for the held step. */
+   out from under the spotlight, so we neutralise it for the held step. */
 var _tScrollOrig = window.tScroll;
 function pinThread(on){ window.tScroll = on ? function(){} : _tScrollOrig; }
 
 function tourStart(){
   if (window.innerWidth < 900) return;
   /* tour-lock both reveals #stage and pins it to the viewport, so there is no
-     scrolling to coordinate — the app simply appears in place. */
+     scrolling to coordinate, the app simply appears in place. */
   document.body.classList.add('tour-lock');
   document.getElementById('tOverlay').classList.add('on');
   renderDots();
@@ -1527,7 +1527,7 @@ function tourEnd(){
   document.getElementById('tOverlay').classList.remove('on');
   /* Hand off to free roam rather than closing up: the coach-marks go away but
      the app stays open and fully interactive so they can explore on their own.
-     Applies to Finish, Skip and Esc alike — they've already given an email,
+     Applies to Finish, Skip and Esc alike, they've already given an email,
      dumping them back on the hero with nothing would be a poor trade. */
   document.body.classList.remove('tour-lock');
   document.body.classList.add('free-roam');
@@ -1558,7 +1558,7 @@ function tourGo(i){
   cancelAnimationFrame(tTrackRaf);
   pinThread(false);
   /* A pending wait from the step we're leaving would otherwise leak its
-     spinner into this step and leave Next disabled — soft-locking the tour. */
+     spinner into this step and leave Next disabled, soft-locking the tour. */
   var staleWait = document.getElementById('ttWait');
   if (staleWait) staleWait.remove();
   document.getElementById('ttNext').disabled = false;
