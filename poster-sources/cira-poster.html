@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 2000px; height: 1500px; background: #FFFFFF; }
+  body { font-family: 'Inter', sans-serif; color: #10233F; -webkit-font-smoothing: antialiased; }
+  .poster { position: relative; width: 2000px; height: 1500px; padding: 118px 150px 96px; }
+
+  .eyebrow { font-size: 33px; font-weight: 800; letter-spacing: 0.09em; color: #1E7AE5; text-transform: uppercase; }
+  h1.title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 92px; letter-spacing: -0.01em; color: #12253F; margin-top: 12px; }
+
+  .mid { position: relative; display: grid; grid-template-columns: 520px 1fr 540px;
+         grid-template-rows: 56px auto; column-gap: 70px; align-items: start; margin-top: 62px; }
+  .lab { grid-row: 1; text-align: center; font-size: 22px; font-weight: 700;
+         letter-spacing: 0.12em; text-transform: uppercase; color: #8391A0; }
+  .lab.l1 { grid-column: 1; } .lab.l2 { grid-column: 2; } .lab.l3 { grid-column: 3; }
+  .z1 { grid-column: 1; grid-row: 2; } .z2 { grid-column: 2; grid-row: 2; } .z3 { grid-column: 3; grid-row: 2; }
+
+  /* ---------- gauge ---------- */
+  .gauge { position: relative; height: 500px; }
+  .gauge svg.g { display: block; margin: 0 auto; }
+  .gval { position: absolute; left: 50%; top: 300px; transform: translateX(-50%); white-space: nowrap;
+          background: #12233C; color: #FFFFFF; font-size: 33px; font-weight: 700;
+          padding: 16px 34px; border-radius: 16px; }
+  .scopes { position: absolute; left: 50%; top: 392px; transform: translateX(-50%); display: flex; gap: 14px; }
+  .scopes span { font-size: 23px; font-weight: 700; letter-spacing: 0.04em; color: #FFFFFF;
+                 padding: 12px 24px; border-radius: 999px; white-space: nowrap; }
+  .s1 { background: #12233C; } .s2 { background: #274063; } .s3 { background: #1E7AE5; }
+
+  /* ---------- factor cards ---------- */
+  .cards { display: flex; flex-direction: column; gap: 34px; padding-top: 30px; }
+  .fcard { display: flex; align-items: center; gap: 24px; background: #FFFFFF;
+           border: 1.5px solid #E4EAF1; border-radius: 18px; padding: 30px 32px; }
+  .fcard.sel { border: 2.5px solid #1E7AE5; }
+  .fdot { flex: none; width: 26px; height: 26px; border-radius: 50%; background: #58C0E0; }
+  .fcheck { flex: none; width: 40px; height: 40px; border-radius: 50%; background: #2E9E44;
+            display: flex; align-items: center; justify-content: center; }
+  .fcard .t { font-size: 30px; font-weight: 700; color: #17263B; }
+  .fcard .s { font-size: 24px; color: #7C8894; margin-top: 6px; white-space: nowrap; }
+
+  /* ---------- chart ---------- */
+  .chartcard { border: 1.5px solid #E1E8F1; border-radius: 20px; padding: 40px 40px 30px; height: 520px;
+               position: relative; box-shadow: 0 24px 54px -34px rgba(20,55,95,0.22); }
+  .clab { font-size: 24px; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; color: #9AA6B3; }
+  .cyear { position: absolute; right: 66px; top: 34px; font-size: 26px; font-weight: 700; color: #12253F; }
+  .pct { position: absolute; right: 150px; top: 118px; background: #2E9E44; color: #FFFFFF;
+         font-size: 27px; font-weight: 700; padding: 12px 26px; border-radius: 999px; }
+  .axis { position: absolute; left: 40px; right: 40px; bottom: 26px; display: flex; justify-content: space-between;
+          font-size: 24px; color: #98A4B1; }
+
+  /* ---------- arrows ---------- */
+  .arrow { position: absolute; }
+
+  /* ---------- stats ---------- */
+  .stats { position: absolute; left: 150px; right: 150px; bottom: 96px;
+           display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat { text-align: center; }
+  .stat .n { font-family: 'Fraunces', serif; font-weight: 600; font-size: 96px; line-height: 1; }
+  .stat .k { margin-top: 18px; font-size: 26px; font-weight: 700; letter-spacing: 0.10em;
+             text-transform: uppercase; color: #55636F; }
+  .n.blue { color: #1E7AE5; } .n.green { color: #2E9E44; } .n.sky { color: #4FB3E0; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="eyebrow">CIRA · THE GHG AGENT</div>
+  <h1 class="title">Picks the factor. Defends the choice.</h1>
+
+  <div class="mid">
+    <div class="lab l1">Cira · The GHG Agent</div>
+    <div class="lab l2">Finds Correct Emission Factor</div>
+    <div class="lab l3">The Path</div>
+
+    <!-- gauge -->
+    <div class="z1 gauge">
+      <svg class="g" width="500" height="360" viewBox="0 0 460 360">
+        <circle cx="230" cy="250" r="208" fill="none" stroke="#EDF2F7" stroke-width="2"/>
+        <circle cx="230" cy="250" r="183" fill="none" stroke="#EDF2F7" stroke-width="2"/>
+        <path d="M80,250 A150,150 0 0 1 371,199" fill="none" stroke="#EAF0F6" stroke-width="36" stroke-linecap="round"/>
+        <path d="M80,250 A150,150 0 0 1 144,127" fill="none" stroke="#7FC8E6" stroke-width="36" stroke-linecap="round"/>
+        <path d="M146,124 A150,150 0 0 1 281,109" fill="none" stroke="#1E7AE5" stroke-width="36"/>
+        <path d="M283,109 A150,150 0 0 1 371,199" fill="none" stroke="#12233C" stroke-width="36" stroke-linecap="round"/>
+        <line x1="230" y1="250" x2="286" y2="144" stroke="#12233C" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="300" cy="118" r="23" fill="#2E9E44"/>
+        <path d="M289,118 l8,8 l14,-16" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="230" cy="250" r="17" fill="#12233C"/>
+        <circle cx="230" cy="250" r="6.5" fill="#2E86E8"/>
+      </svg>
+      <div class="gval">0.716 kgCO2e/kWh</div>
+      <div class="scopes"><span class="s1">SCOPE 1</span><span class="s2">SCOPE 2</span><span class="s3">SCOPE 3</span></div>
+    </div>
+
+    <!-- factor cards -->
+    <div class="z2 cards">
+      <div class="fcard"><span class="fdot"></span><div><div class="t">EXIOBASE</div><div class="s">v3.8 · spend-based</div></div></div>
+      <div class="fcard"><span class="fdot"></span><div><div class="t">GLEC</div><div class="s">v3.0 · transport &amp; logistics</div></div></div>
+      <div class="fcard sel"><span class="fcheck"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5,11 l4,4 l8,-10" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="t">BEIS v2024.1</div><div class="s">UK · high confidence · selected</div></div></div>
+    </div>
+
+    <!-- chart -->
+    <div class="z3">
+      <div class="chartcard">
+        <div class="clab">Decarb Trajectory</div>
+        <div class="cyear">2030</div>
+        <svg width="100%" height="360" viewBox="0 0 460 360" preserveAspectRatio="none" style="position:absolute; left:0; top:70px;">
+          <line x1="408" y1="20" x2="408" y2="300" stroke="#5BB0D8" stroke-width="2.5" stroke-dasharray="7 8"/>
+          <path d="M40,60 C120,70 150,120 210,175 C270,230 320,280 408,292" fill="none" stroke="#2E9E44" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="40" cy="60" r="10" fill="#2E9E44"/>
+          <circle cx="210" cy="175" r="10" fill="#2E9E44"/>
+          <circle cx="320" cy="258" r="10" fill="#2E9E44"/>
+          <circle cx="408" cy="292" r="12" fill="#FFFFFF" stroke="#2E9E44" stroke-width="5"/>
+        </svg>
+        <div class="pct">−47%</div>
+        <div class="axis"><span>FY22</span><span>target</span></div>
+      </div>
+    </div>
+
+    <!-- arrow gauge -> cards -->
+    <svg class="arrow" style="left:512px; top:250px;" width="120" height="150" viewBox="0 0 120 150">
+      <path d="M6,140 C60,120 78,70 100,26" fill="none" stroke="#5BB0D8" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M84,30 L102,20 L104,44" fill="none" stroke="#5BB0D8" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <!-- arrow cards -> chart -->
+    <svg class="arrow" style="right:548px; top:470px;" width="130" height="40" viewBox="0 0 130 40">
+      <line x1="0" y1="20" x2="106" y2="20" stroke="#5BB0D8" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M100,7 L124,20 L100,33" fill="none" stroke="#5BB0D8" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n blue">15+</div><div class="k">Factor Databases</div></div>
+    <div class="stat"><div class="n blue">3</div><div class="k">Scopes Covered</div></div>
+    <div class="stat"><div class="n green">−47%</div><div class="k">By 2030</div></div>
+    <div class="stat"><div class="n sky">1.5°C</div><div class="k">SBTi Path</div></div>
+  </div>
+</div>
+</body>
+</html>
