@@ -17,6 +17,14 @@
       This page requires JavaScript to display.
     </div>
   </noscript>
+<style id="embed-fix">
+  /* Embed-only: neutralise vh + scroll-driven sticky cascade so the section
+     flows as a normal document inside an auto-height iframe. */
+  #agents .r-team { grid-template-columns: 1fr !important; gap: 0 !important; }
+  #agents [data-team-block] { min-height: auto !important; padding-bottom: 46px !important; }
+  #agents .r-poster-col, #agents .r-poster-stack { display: none !important; }
+  #agents .r-agent-poster { display: block !important; margin: 26px auto 4px !important; max-width: 820px !important; }
+</style>
 </head>
 <body>
 <script>

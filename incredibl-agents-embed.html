@@ -17,34 +17,17 @@
       This page requires JavaScript to display.
     </div>
   </noscript>
+<style id="embed-fix">
+  /* Embed-only: neutralise vh + scroll-driven sticky cascade so the section
+     flows as a normal document inside an auto-height iframe. */
+  #agents .r-team { grid-template-columns: 1fr !important; gap: 0 !important; }
+  #agents [data-team-block] { min-height: auto !important; padding-bottom: 46px !important; }
+  #agents .r-poster-col, #agents .r-poster-stack { display: none !important; }
+  #agents .r-agent-poster { display: block !important; margin: 26px auto 4px !important; max-width: 820px !important; }
+</style>
 </head>
 <body>
-  <div id="__bundler_thumbnail">
-  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <rect width="1200" height="800" fill="#0A2540"></rect>
-    <g transform="translate(600 340)">
-      <g transform="translate(-330 -70)">
-        <rect x="0" y="0" width="120" height="140" rx="26" fill="#3B6FD4"></rect>
-        <rect x="140" y="0" width="120" height="140" rx="26" fill="#3E86D8"></rect>
-        <rect x="280" y="0" width="120" height="140" rx="26" fill="#1699B0"></rect>
-        <rect x="420" y="0" width="120" height="140" rx="26" fill="#7C5CFF"></rect>
-        <rect x="560" y="0" width="120" height="140" rx="26" fill="#E08A2B"></rect>
-        <g fill="#FFFFFF" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="78" text-anchor="middle">
-          <text x="60" y="96">E</text>
-          <text x="200" y="96">A</text>
-          <text x="340" y="96">C</text>
-          <text x="480" y="96">Q</text>
-          <text x="620" y="96">V</text>
-        </g>
-      </g>
-    </g>
-    <text x="600" y="560" fill="#5EC4E3" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="60" letter-spacing="-2" text-anchor="middle">Incredibl Agents</text>
-    <text x="600" y="620" fill="#8F9BB0" font-family="Helvetica, Arial, sans-serif" font-weight="600" font-size="30" text-anchor="middle">Your extended sustainability team</text>
-  </svg>
-</div>
-  <div id="__bundler_loading">Unpacking...</div>
-
-  <script>
+<script>
     
 document.addEventListener('DOMContentLoaded', async function() {
   const loading = document.getElementById('__bundler_loading');
