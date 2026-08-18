@@ -18,6 +18,9 @@
     </div>
   </noscript>
 <style id="embed-fix">
+  /* embed-body-fix: kill splash-leftover full-viewport body so iframe auto-height can't run away */
+  html, body { min-height: 0 !important; height: auto !important; display: block !important; }
+  body { align-items: initial !important; justify-content: initial !important; overflow: visible !important; }
   /* Embed-only: neutralise vh + scroll-driven sticky cascade so the section
      flows as a normal document inside an auto-height iframe. */
   #agents .r-team { grid-template-columns: 1fr !important; gap: 0 !important; }
